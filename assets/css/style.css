@@ -1,0 +1,51 @@
+@font-face {
+    font-family: yekan;
+    src: url("../font/yekan-font/Yekan.woff");
+    src: url("../font/yekan-font/Yekan.ttf");
+}
+
+*{
+    font-family: yekan;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 100vh;
+}
+
+.pictureBox{
+    position: relative;
+    background-color: #fff;
+    width: 300px;
+    height: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+
+.pictureBox p{
+    color: #888;
+}
+
+.pictureBox h2 , .pictureBox p{
+    position: relative;
+    z-index: 1;
+}
+
+.pictureBox:after{
+    content:"";
+    position: absolute;
+    inset:0;
+    background: url("../img/1.jpg") center / cover;
+    opacity: 0;
+    transition: opacity 0.5s;
+    z-index: 0;
+}
+.pictureBox:hover::after{
+    opacity: 1;
+}
