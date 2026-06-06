@@ -12,63 +12,86 @@
     --primary-color:#58f7ff;
     --secondary-color: #3cff00;
     --tertiary-color: #ff8c69;
-    --quaternary-color: #ff0000;
-    --quinary-color: #0000ff;
-    --senary-color: #000000;
-    --septenary-color: #ffffff;
-
 }
 
-body{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-.container{
+.grid{
     display: grid;
-    grid-template-columns: 1fr 1fr 1.2fr;
-    grid-template-rows: 100px 100px;
-    align-content: center;
-    width: 550px;
-    height: 450px;
-    border: 2px solid;
-    text-align: center;
-    background: #eee;
+    height: 100vh;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 10fr 1fr;
+    grid-template-areas: 
+    "header header"
+    "sidebar main"
+    "footer footer";
     gap: 10px;
-    padding: 5px;
 }
 
-.item{
+.header{
+    grid-area: header;
+    background-color: lightblue;
     display: flex;
     align-items: center;
     justify-content: center;
-    background:red;
-    border-radius: 8px;
-    padding: 10px;
-    overflow: hidden;
 }
 
-.item img{
-    height: 100%;
-    object-fit: cover;
+.main{
+    grid-area: main;
+    background-color: goldenrod;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.item:first-child{
-    background-color: var(--tertiary-color);
+.sidebar{
+    grid-area: sidebar;
+    background-color: teal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.item:nth-child(2){
-    background-color: var(--secondary-color);
+
+.footer{
+    grid-area: footer;
+    background-color: rgb(255, 149, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.item:nth-child(3){
-    background-color: var(--primary-color);
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
 }
-.item:nth-child(4){
-    background-color: var(--senary-color);
+
+.item1{
+    background-color: #00ff00;
+    grid-area: 1 / 2 / 3 / 4;
 }
-.item:nth-child(5){
-    background-color: var(--quinary-color);
+.item2, .item3{
+    background-color: aqua;
 }
-.item:last-child{
-    background-color: var(--quaternary-color);
+.item2{
+    grid-area: 1 / 4 / 2 / 5;
+}
+.item3{
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+@media (max-width: 768px) {
+    .grid{
+        grid-template-areas: 
+        "header header"
+        "main main"
+        "footer footer";
+    }
+    .sidebar{ display: none;}
+    .grid-container{
+        grid-template-columns: 200px;
+    }
+
+    .item1, .item2 , .item3{
+        grid-area: auto;
+    }
 }
