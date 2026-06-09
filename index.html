@@ -7,11 +7,66 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <h2>چند انیمیشن روی یک المان</h2>
-    <!-- مربوط به چک باکس -->
-    <input type="checkbox" id="toggle">
-    <label for="toggle">اجرای انیمیشن</label>
-    <!-- المان انیمیشنی -->
-    <div class="box"></div>
+    <header>
+        <nav class="main-nav">
+            <div class="logo">
+                <h1>گالری تصاویر</h1>
+            </div>
+            <ul class="menu">
+                <li><a href="">خانه</a></li>
+                <li><a href="">گالری</a></li>
+                <li><a href="">درباره‌ما</a></li>
+                <li><a href="">تماس‌با‌ما</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>گالری تصاویر با کنترل انیمیشن</h2>
+        <!--  چک باکس پنهان -->
+        <input type="checkbox" id="toggle">
+        <label for="toggle">پخش / توقف انیمیشن</label>
+        <!-- گالری تصاویر -->
+        <div class="galleryBox">
+            <div class="slider">
+                <img src="assets/img/2.jpg" alt="">
+                <img src="assets/img/8.jpg" alt="">
+                <img src="assets/img/3.jpg" alt="">
+                <img src="assets/img/4.jpg" alt="">
+                <img src="assets/img/5.jpg" alt="">
+                <img src="assets/img/6.jpg" alt="">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footerSection">
+            <div class="about">
+                <h3>درباره‌ما</h3>
+                <p>
+                    گالری تصاویر ما با ارائه بهترین تصاویر و انیمیشن‌های جذاب، <br>
+                    تجربه‌ای متفاوت را برای شما به ارمغان می‌آورد
+                </p>
+            </div>
+            <div class="contactUs">
+                <h3>تماس‌با‌ما</h3>
+                <p>
+                    ایمیل: info@example.com <br>
+                    تلفن: ۰۲۱-۱۲۳۴۵۶۷۸۹
+                </p>
+            </div>
+            <div class="socialMedia">
+                <h3>شبکه‌های‌اجتماعی</h3>
+                <ul>
+                    <li>اینستاگرام</li>
+                    <li>توییتر</li>
+                    <li>لینکدین</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footerBottom">
+            &copy; تمامی حقوق محفوظ است ۱۴۰۵
+        </div>
+    </footer>
 </body>
 </html>

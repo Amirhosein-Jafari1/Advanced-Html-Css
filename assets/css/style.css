@@ -12,6 +12,9 @@
     --primary-color:#58f7ff;
     --secondary-color: #3cff00;
     --tertiary-color: #ff8c69;
+    --header-bg: #ffffff;
+    --text-color: #333333;
+    --footer-text: #ffffff;
 }
 
 *{
@@ -21,55 +24,155 @@
     padding: 0;
 }
 
+
 body{
-    /* display: flex;
+    background-color: #eee;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: var(--text-color);
+}
+
+/* header style */
+
+header{
+    background-color: var(--header-bg);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    padding: 2rem 4rem;
+}
+
+.main-nav{
+    display: flex;
     align-items: center;
-    flex-direction: column; */
+    justify-content: space-between;
+}
+
+.logo h1{
+    color: aqua;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
+}
+.menu li{
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+.menu a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+/* main style */
+main{
+    flex: 1;
     text-align: center;
 }
 
 h2{
-    margin: 100px auto;
-    margin-bottom: 30px;
+    margin: 3rem 0;
 }
 
-label{
-    background-color: #1e7bd8;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
+.galleryBox{
+    margin: 3rem auto;
+    width: 90%;
+    max-width: 600px;
+    height: 200px;
+    border: 2px solid ;
+    border-radius: 0.8rem;
+    overflow: hidden;
+    position: relative;
 }
 
-.box{
-    background-color: springgreen;
-    width: 100px;
-    height: 100px;
-    margin: 50px auto;
-    border-radius: 8px;
-    animation: rotate 4s linear infinite alternate,
-    move 4s linear infinite alternate, 
-    colorChange 4s ease-in infinite alternate;
-    animation-composition: accumulate;
-    animation-fill-mode: forwards;
-}
-
-#toggle:checked ~ .box{
+.slider{
+    display: flex;
+    max-width: 200%;
+    height: 100%;
+    position: relative;
+    animation: slide 7s linear infinite;
+    animation-direction: alternate;
     animation-play-state: paused;
 }
+
+.slider img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes slide {
+    0%{
+        transform: translateX(0%);
+    }
+    10%{
+        transform: translateX(0%);
+    }
+    90%{
+        transform: translateX(-230%);
+    }
+    100%{
+        transform: translateX(-230%);
+    }
+}
+
 #toggle{
     display: none;
 }
 
-@keyframes rotate {
-    from{ transform: rotate(0);}
-    to{ transform: rotate(360deg);}
+#toggle:checked ~ .galleryBox .slider{
+    animation-play-state: running;
 }
-@keyframes move {
-    from{ transform: translateX(0);}
-    to{ transform: translateX(150px);}
+
+label{
+    background-color: royalblue;
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
 }
-@keyframes colorChange {
-    from{ background-color: crimson;}
-    to{ background-color: teal;}
+label:hover{
+    background-color: darkblue;
+}
+
+/* footer style */
+footer{
+    background: linear-gradient(to bottom, #222, #111);
+    text-align: center;
+    color: var(--footer-text);
+    padding: 1rem;
+}
+.footerSection{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+    text-align: justify;
+}
+.footerSection h3{
+    color: aqua;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+.footerSection p {
+    
+    font-size: 1.2rem;
+}
+.footerSection ul{
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+.footerSection li{
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.footerBottom{
+    padding: 1rem 0 0 0;
+    font-weight: bold;
+    border-top: 1px solid #555;
+    font-size: 1.2rem;
 }
