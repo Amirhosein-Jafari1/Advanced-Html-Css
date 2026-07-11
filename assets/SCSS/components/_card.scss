@@ -1,0 +1,24 @@
+@use "../base/variables";
+@use "../base/functions.scss";
+
+.card {
+    background: variables.$light;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+
+    h2{
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    p{
+        color: #555;
+        margin-bottom: 12px;
+    }
+}
+
+.main-card{
+    padding: functions.to-rem(100px);
+    border-radius: functions.space(3);
+}

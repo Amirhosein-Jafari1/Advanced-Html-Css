@@ -1,0 +1,12 @@
+@use "./base/reset";
+@use "./base/variables";
+@use "./components/buttons";
+@use "./components/card";
+@use "./layout/container";
+@use "./base/mixins.scss";
+@use "./base/functions.scss";
+
+.card-actions {
+    @include mixins.flex-center(space-between,center,column);
+    gap: 10px;
+}

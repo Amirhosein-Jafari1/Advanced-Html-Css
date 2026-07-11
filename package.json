@@ -1,0 +1,24 @@
+{
+  "name": "advancedhtmlcss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Amirhosein-Jafari1/Advanced-Html-Css.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Amirhosein-Jafari1/Advanced-Html-Css/issues"
+  },
+  "homepage": "https://github.com/Amirhosein-Jafari1/Advanced-Html-Css#readme",
+  "devDependencies": {
+    "sass": "^1.101.0"
+  }
+}

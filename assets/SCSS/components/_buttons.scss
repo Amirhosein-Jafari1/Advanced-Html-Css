@@ -1,0 +1,22 @@
+@use "../base/variables";
+@use "../base/mixins.scss";
+@use "../base/functions.scss";
+
+.btn{
+    padding: functions.space(3) functions.space(4);
+    border: none;
+    border-radius: variables.$radius;
+    cursor: pointer;
+    margin: functions.space(4) auto;
+    font-size: functions.to-rem(16px); 
+}
+
+.btn-primary{
+    background: variables.$primary;
+    color: variables.$light;
+}
+
+.btn-dark{
+    background: variables.$dark;
+    color: variables.$light;
+}
