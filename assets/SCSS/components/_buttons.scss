@@ -1,6 +1,6 @@
 @use "../base/variables";
-@use "../base/mixins.scss";
-@use "../base/functions.scss";
+@use "../base/mixins";
+@use "../base/functions";
 
 .btn{
     padding: functions.space(3) functions.space(4);
@@ -19,4 +19,12 @@
 .btn-dark{
     background: variables.$dark;
     color: variables.$light;
+}
+
+.btn-light{
+    @include mixins.button-theme(#fff);
+}
+
+.btn-dark{
+    @include mixins.button-theme(#1e1e1e)
 }

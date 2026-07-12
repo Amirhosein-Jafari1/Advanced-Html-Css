@@ -3,8 +3,9 @@
 @use "./components/buttons";
 @use "./components/card";
 @use "./layout/container";
-@use "./base/mixins.scss";
-@use "./base/functions.scss";
+@use "./base/functions";
+@use "./base/mixins";
+@use "./utilities/spacing";
 
 .card-actions {
     @include mixins.flex-center(space-between,center,column);
