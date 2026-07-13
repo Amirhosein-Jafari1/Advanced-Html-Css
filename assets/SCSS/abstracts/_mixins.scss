@@ -1,0 +1,28 @@
+// /* 
+// Mixins
+// */
+
+// /*
+// | ریسپانسیو موبایل
+// */
+@mixin mobile {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+// /* 
+// | دکمه قابل استفاده مجدد
+// */
+@mixin button($bgColor) {
+    background-color: $bgColor;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+
+    &:hover {
+        opacity: 0.9;
+    }
+}

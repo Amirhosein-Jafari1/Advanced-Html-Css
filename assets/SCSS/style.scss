@@ -1,13 +1,13 @@
+@use "./abstracts/functions";
+@use "./abstracts/mixins";
+@use "./abstracts/variables";
+
 @use "./base/reset";
-@use "./base/variables";
+
 @use "./components/buttons";
 @use "./components/card";
-@use "./layout/container";
-@use "./base/functions";
-@use "./base/mixins";
-@use "./utilities/spacing";
 
-.card-actions {
-    @include mixins.flex-center(space-between,center,column);
-    gap: 10px;
-}
+@use "./layout/courses";
+@use "./layout/features";
+
+@use "./utilities/utilites";

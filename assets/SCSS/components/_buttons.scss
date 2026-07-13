@@ -1,30 +1,11 @@
-@use "../base/variables";
-@use "../base/mixins";
-@use "../base/functions";
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
-.btn{
-    padding: functions.space(3) functions.space(4);
-    border: none;
-    border-radius: variables.$radius;
-    cursor: pointer;
-    margin: functions.space(4) auto;
-    font-size: functions.to-rem(16px); 
-}
+/*
+| Buttons Component
+*/
 
-.btn-primary{
-    background: variables.$primary;
-    color: variables.$light;
-}
-
-.btn-dark{
-    background: variables.$dark;
-    color: variables.$light;
-}
-
-.btn-light{
-    @include mixins.button-theme(#fff);
-}
-
-.btn-dark{
-    @include mixins.button-theme(#1e1e1e)
+.btn {
+  padding: 12px 20px;
+  @include button($primary-color);
 }

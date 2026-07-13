@@ -1,0 +1,33 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+/*
+| Features Section
+*/
+
+.features {
+  margin-top: 60px;
+
+  &_title {
+    text-align: center;
+    color: $primary-color;
+    margin-bottom: 30px;
+  }
+
+  &_items {
+    display: flex;
+    gap: 20px;
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  &_item {
+    background: white;
+    flex: 1;
+    padding: 20px;
+    border-radius: $border-radius;
+    text-align: center;
+  }
+}
